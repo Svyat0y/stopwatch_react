@@ -15,27 +15,40 @@ div {
     font-size: 26px;
     border-radius: 5px;
     box-shadow: 0 0 2px 1px black;
+    transition: all .2s ease;
+}
+.btnGreen,
+.btnRed,
+.btnOrange,
+.btnBlueWait,
+.btnBlue {
+    color: #fff;
 }
 .btnGreen {
     background: green;
-    color: #fff;
+}
+.btnGreen:hover {
+    background: #249116;
 }
 .btnBlue {
     background: #3271CA;
-    color: #fff;
-    transition: all 1.9s ease;
+}
+.btnBlue:hover {
+    background: #4981E7;
 }
 .btnBlueWait {
     background: #3271CA;
-    color: #fff;
     box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.5);
-    transition: all 1.9s ease;
 }
 .btnOrange {
     background: #DB9303;
-    color: #fff;
+}
+.btnOrange:hover {
+    background: #E7A109;
 }
 .btnRed {
     background: #AC0000;
-    color: #fff;
+}
+.btnRed:hover {
+    background: #C10000;
 }

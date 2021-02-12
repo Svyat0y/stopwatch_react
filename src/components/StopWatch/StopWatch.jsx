@@ -3,8 +3,8 @@ import classes from './StopWatch.module.css';
 import DisplayComponent from "./DisplayComponent/DisplayComponent";
 import BtnComponent from "./Btn/BtnComponent";
 
-const StopWatch = () => {
 
+const StopWatch = () => {
     const [time, setTime] = useState({h: 0, m: 0, s: 0});
     const [interval, setIntervId] = useState();
     const [status, setStatus] = useState(0);
@@ -25,11 +25,9 @@ const StopWatch = () => {
         seconds++;
 
         return setTime({h: hours, m: minutes, s: seconds});
-    }
+    };
 
-    const run = () => {
-        setIntervId(setInterval(updateTime, 1000));
-    }
+    const run = () => setIntervId(setInterval(updateTime, 1000));
 
     const start = () => {
         updateTime();
@@ -46,15 +44,14 @@ const StopWatch = () => {
         setStatus(3);
     }
     const reset = () => {
-        setStatus(1);
-        setTime({h: 0, m: 0, s: 0});
+        clearInterval(interval);
         setIntervId(null);
-        run();
+        setTime({h: 0, m: 0, s: 0});
+        setStatus(1);
     }
     useEffect(() => {
-        interval === null && run();
+        interval=== null && run();
     }, [interval]);
-
 
     return (
         <div className={classes.mainContent}>
