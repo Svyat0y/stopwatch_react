@@ -1,0 +1,18 @@
+.displayWrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-bottom: 20px;
+}
+.displayWrapper span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 26px;
+    width: 75px;
+    height: 50px;
+    background: #A36E03;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px black;
+}

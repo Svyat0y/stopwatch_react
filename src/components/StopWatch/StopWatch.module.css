@@ -1,0 +1,19 @@
+.mainContent {
+    width: 100vw;
+    height: 100vh;
+    background: grey;
+    display: flex;
+    justify-content: center;
+}
+.stopWatchWrapper {
+    max-width: 360px;
+    width: 100%;
+    height: 200px;
+    margin: 10% 15px;
+    background: #D38E03;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}

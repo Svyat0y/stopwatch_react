@@ -1,0 +1,41 @@
+div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btnWrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    width: 90px;
+    height: 40px;
+    color: #D38E03;
+    font-size: 26px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px black;
+}
+.btnGreen {
+    background: green;
+    color: #fff;
+}
+.btnBlue {
+    background: #3271CA;
+    color: #fff;
+    transition: all 1.9s ease;
+}
+.btnBlueWait {
+    background: #3271CA;
+    color: #fff;
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.5);
+    transition: all 1.9s ease;
+}
+.btnOrange {
+    background: #DB9303;
+    color: #fff;
+}
+.btnRed {
+    background: #AC0000;
+    color: #fff;
+}
