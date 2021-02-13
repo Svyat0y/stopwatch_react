@@ -21,7 +21,7 @@ const BtnComponent = (props) => {
                     </div>
                 )
                 : ''}
-            {props.status === 3 ? (
+            {props.status === 2 ? (
                     <div className={classes.btnWrapper}>
                         <button onClick={props.start} className={`${classes.btnGreen} ${classes.btn}`}>Start</button>
                         <button onClick={props.wait} className={`${classes.btnBlueWait} ${classes.btn}`}>Wait</button>

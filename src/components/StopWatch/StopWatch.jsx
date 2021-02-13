@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import classes from './StopWatch.module.css';
 import DisplayComponent from "./DisplayComponent/DisplayComponent";
-import BtnComponent from "./Btn/BtnComponent";
+import BtnComponent from "./BtnComponent/BtnComponent";
 
 
 const StopWatch = () => {
     const [time, setTime] = useState({h: 0, m: 0, s: 0});
-    const [interval, setIntervId] = useState();
+    const [intervalId, setIntervalId] = useState();
     const [status, setStatus] = useState(0);
 
     let seconds = time.s,
@@ -27,31 +27,35 @@ const StopWatch = () => {
         return setTime({h: hours, m: minutes, s: seconds});
     };
 
-    const run = () => setIntervId(setInterval(updateTime, 1000));
+    const run = () => setIntervalId(setInterval(updateTime, 1000));
 
     const start = () => {
         updateTime();
         setStatus(1);
         run();
     }
+
     const stop = () => {
-        clearInterval(interval);
+        clearInterval(intervalId);
         setTime({h: 0, m: 0, s: 0});
         setStatus(0);
     }
+
     const wait = () => {
-        clearInterval(interval);
-        setStatus(3);
+        clearInterval(intervalId);
+        setStatus(2);
     }
+
     const reset = () => {
-        clearInterval(interval);
-        setIntervId(null);
+        clearInterval(intervalId);
+        setIntervalId(null);
         setTime({h: 0, m: 0, s: 0});
         setStatus(1);
     }
+
     useEffect(() => {
-        interval=== null && run();
-    }, [interval]);
+        intervalId === null && run();
+    }, [intervalId]);
 
     return (
         <div className={classes.mainContent}>
